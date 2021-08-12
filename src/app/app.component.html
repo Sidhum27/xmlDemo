@@ -1,0 +1,22 @@
+<h2>Test Task </h2>>
+<div> 
+<div>
+    <form #f="ngForm" (ngSubmit)="onSubmit(f)" novalidate  name="form1"   >
+
+    XML to Send :<textarea [ngModel]="xmlItems" name="ORDER_XML" cols="72" rows="45">
+    </textarea><br />
+    <input type="submit"  value="Send it">
+</form>
+</div>
+<fieldset>
+<legend>Confirm</legend>
+<form #f1="ngForm" (ngSubmit)="onConfirm()" >
+
+    LN Token : <input type="text" [(ngModel)]="LEXISNEXIS_TRANSACTION_TOKEN" name="LEXISNEXIS_TRANSACTION_TOKEN"  size=45><br />
+    Client Token : <input type="text" [(ngModel)]="CUSTOMER_TRANSACTION_TOKEN" name="CUSTOMER_TRANSACTION_TOKEN"   size=45><br />
+    <input type="submit"  value="Confirm it">
+</form>
+ 
+ </fieldset>
+</div>
+ 
